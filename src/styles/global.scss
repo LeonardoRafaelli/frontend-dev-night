@@ -1,0 +1,81 @@
+:root{
+    --primary: #0047B5;
+    --light-primary: #3B8EA5;
+    --dark-primary: #193969;
+    --light-gray: #d9d9d980;
+
+    --dark-background: #D9D9D9;
+    --background: #F5F5F5;
+    
+    --text-title: #000;
+    --text-body: #222;
+
+    --red: #B54141;
+    --green: #6BB85F;
+    --yellow: #f3ca40;
+    --warn: #F49E4C;
+    
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    //font-size: 16px DEFAULT;
+    @media (max-width: 1080px) {
+        font-size: 93.75%; //font-size: 15px
+    }
+    @media (max-width:720px) {
+        font-size:87.75%; //font-size:14px
+    }
+}
+body, input, textarea, button{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 600;
+}
+body{
+   background: var(--background);
+   -webkit-font-smoothing: antialiased;
+   }
+   button{
+       cursor: pointer;
+   }
+   [disabled]{
+       opacity: .6;
+       cursor: not-allowed;
+   }
+   .react-modal-overlay{
+     background-color: rgba( 0, 0, 0, 0.5);
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     display:flex;
+     align-items: center;
+     justify-content: center;
+   }
+   .react-modal-content{
+     width: 100%;
+     max-width: 580px;
+     background: var(--background);
+     padding: 3rem;
+     position: relative;
+     border-radius: 0.25rem
+   }
+   .react-modal-close{
+     position: absolute;
+     top: 1.25rem;
+     right: 1.25rem;
+     border: 0;
+     background: transparent;
+     transition: filter .2s;
+     &:hover{
+       filter: brightness(0.8);
+     }
+   }
